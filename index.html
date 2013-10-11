@@ -12,37 +12,93 @@
   color: #969696;
 }
 
-.caption {
+.caption,
+.title {
   font-size: 96px;
   text-align: center;
   text-shadow: 0px 2px 6px rgba(0,0,0,.5);
 }
 
-img {
+.title {
+  margin-top: 0
+}
+
+.stack {
+  text-align: center;
+}
+
+.stack img {
   display: block;
   margin: 0 auto;
 }
 
-.right {
-  float: right;
-  max-height: 100%;
+.stack ul {
+  list-style: none;
+  padding-left: 0
 }
+
+.slide-r2d2 {
+  background: url(imgs/r2d2.jpg) no-repeat center; /*http://bit.ly/1guWLcc*/
+  background-size: cover;
+}
+
+.slide-welbe {
+  background: #DF0080;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #DF0080), color-stop(52%, #EC5656), color-stop(100%, #EDA130));
+  background: -webkit-linear-gradient(#DF0080 0%, #EC5656 52%, #EDA130 100%);
+  background: -moz-linear-gradient(#df0080 0%, #ec5656 52%, #eda130 100%);
+  background: -o-linear-gradient(#df0080 0%, #ec5656 52%, #eda130 100%);
+  background: linear-gradient(#DF0080 0%,#EC5656 52%,#EDA130 100%);
+}
+
+.slide-fammatters {
+  padding: 0;
+}
+
+.slide-tao {
+  color: #333333;
+  background: #fdf4f5 url(imgs/dao.jpg) no-repeat left; /*http://bit.ly/1hGE0QC*/
+  background-size: 40%
+}
+
+.slide-raphael {
+  color: #333333;
+  background: #fff url(imgs/raphael.jpg) no-repeat right; /*http://bit.ly/1hGERAN*/
+  background-size: 30%
+}
+
+.slide-galaxy {
+  background: url(imgs/galaxy.jpg) no-repeat center; /*http://bit.ly/PEgoCd*/
+  background-size: cover
+}
+
+
+.slide-know {
+  background: url(imgs/know.jpg) no-repeat center; /*http://bit.ly/GEuAK2*/
+  background-size: cover;
+  padding-top: 50px;
+  text-align: left;
+}
+
 
 </style>
 <body class="overview">
 
 <section>
-  <p class="caption"><b class="big">D3</b></p>
+  <h1 class="caption"><b class="big">D3</b></h1>
   <p class="caption grey">Charts &amp; Graphs</p>
 </section>
 
 <section>
-  <p class="caption">Jake Trent</p>
-  <p class="grey">@jaketrent</p>
+  <h1 class="caption">Jake Trent</h1>
+  <p class="grey">
+    <img src="imgs/libre_avatar.jpg" alt="libre" style="display:inline-block; width:100px; margin: 0 20px -30px 0; border-radius: 0; border: 3px solid #ababab;"/>
+    @jaketrent
+  </p>
 </section>
 
 <section>
-  <p class="caption">O.C. Tanner</p>
+  <img src="imgs/oc-logo.svg" style="width:400px" alt="octanner"/>
   <ul>
     <li>Custom jewelry / awards</li>
     <li>Appreciating great work</li>
@@ -53,19 +109,23 @@ img {
 </section>
 
 <section>
-  <p class="caption">Great Team</p>
+  <h1 class="title">Great Team</h1>
   <ul>
     <li>2 Designers</li>
-    <li>2 Designers</li>
     <li>2 Frontend</li>
+    <li>4 Backend</li>
     <li>2 iOS</li>
-    <li>1 Product/Project</li>
+    <li>1 Product</li>
     <li>1 Sales</li>
   </ul>
 </section>
 
+<section class="slide-fammatters">
+  <img src="imgs/fammatters.jpg" alt="fam matters" style="max-width:100%; max-height:100%;"/>
+</section>
+
 <section>
-  <p class="caption">Stacks</p>
+  <h1 class="title">Flavors</h1>
   <ul>
     <li>Rails</li>
     <li>AngularJS</li>
@@ -73,8 +133,8 @@ img {
   </ul>
 </section>
 
-<section>
-  <p class="caption">Tao</p>
+<section class="slide-tao">
+  <h1 class="title">Tao</h1>
   <ul>
     <li>Continuous Deployment</li>
     <li>&lt;/overhead&gt;</li>
@@ -83,8 +143,12 @@ img {
   </ul>
 </section>
 
+<section class="slide-welbe">
+  <h1 class="caption"><img src="imgs/welbe.svg" style="width:300px" alt="welbe"/></h1>
+</section>
+
 <section>
-  <p class="caption">D3 = Data-Driven Documents</p>
+  <h1 class="caption">D3 = Data-Driven Documents</h1>
 </section>
 
 <section>
@@ -99,15 +163,20 @@ img {
   <img src="imgs/d3.jpg" />
 </section>
 
-<section>
-  <p class="grey">Other</p>
-  <p><b>Canvas</b> - Chart.js, CanvasJS</p>
+<section class="slide-raphael">
+  <h1 class="title">Alternatives</h1>
   <p><b>SVG</b> - Raphael, Google Charts, Highcharts</p>
+  <p><b>Canvas</b> - Chart.js, CanvasJS</p>
 </section>
 
 <section>
-  <h1 class="caption">IE9+</h1>
-  <p class="grey">mhemesath/r2d3 - IE7+</p>
+  <h1 class="title">IE9+</h1>
+  <img src="imgs/caniuse.png" alt="caniuse" style="max-width:100%;"/>
+</section>
+
+<section class="slide-r2d2">
+  <h1 class="caption">Polyfill</h1>
+  <p>mhemesath/r2d3 - IE7+</p>
 </section>
 
 <section>
@@ -123,35 +192,35 @@ img {
 
 <section>
   <h1 class="caption">
-    selection.append
+    .append
   </h1>
   <div class="grey">put something in the dom</div>
 </section>
 
 <section>
   <h1 class="caption">
-    selection.attr
+    .attr
   </h1>
   <div class="grey">set attribute</div>
 </section>
 
 <section>
   <h1 class="caption">
-    selection.style
+    .style
   </h1>
   <div class="grey">set style</div>
 </section>
 
 <section>
   <h1 class="caption">
-    selection.data
+    .data
   </h1>
   <div class="grey">bind data to selection</div>
 </section>
 
 <section>
   <h1 class="caption">
-    selection.enter
+    .enter
   </h1>
   <div class="grey">appending to enter() creates missing elements</div>
 </section>
@@ -191,7 +260,7 @@ img {
   <div class="grey">animation mechanism</div>
 </section>
 
-<section>
+<section class="slide-galaxy">
   <h1 class="caption">
     Lots more (~600 fns)
   </h1>
@@ -212,41 +281,27 @@ img {
 </section>
 
 <section>
-  <p>If you can render something well outside of D3, do it.</p>
+  <p>Use it a lot on what it's good for.</p>
+  <p class="grey">eg, chart</p>
+</section>
+
+<section>
+  <p>Use it little on what it's <b>not</b> good for.</p>
   <p class="grey">eg, labels</p>
 </section>
 
 <section>
-  <p>Often you'll share data outside your chart, so fetch it outside.</p>
+  <p>Fetch data externally</p>
   <p class="grey">eg, pass in req promise</p>
 </section>
 
-<section>
-  <p class="caption">Learn more</p>
+<section class="slide-know">
+  <!--<p class="title">Learn more</p>-->
   <ul>
     <li><a href="https://github.com/mbostock/d3/wiki" target="_blank">github.com/mbostock/d3/wiki</a></li>
     <li><a href="https://www.dashingd3js.com" target="_blank">dashingd3js.com</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">developer.mozilla.org/en-US/docs/Web/SVG</a></li>
   </ul>
-</section>
-
-<section style="background:url(sky.jpg);">
-  <h1 class="caption">GRATUITOUS IMAGE<br>WITH CAPTION</h1>
-</section>
-
-<section>
-  <p>If you stop between slides,<br><b>stack snaps to the closest slide</b>.
-</section>
-
-<section>
-  <p>Stack works on <b>iOS</b>, too.</p>
-</section>
-
-<section>
-  <p>Stack is made by <a href="http://bost.ocks.org/mike/" rel="author">Mike Bostock</a>
-    <br>and is available on <a href="https://github.com/mbostock/stack">GitHub</a>
-    <br>under the <a href="https://github.com/mbostock/stack/blob/gh-pages/LICENSE">BSD license</a>.
-  <p class="grey">View source to get started.
 </section>
 
 <script src="d3.v3.min.js"></script>
