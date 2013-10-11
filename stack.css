@@ -35,10 +35,6 @@ a:not(:hover) {
   position: fixed;
 }
 
-.grey {
-  color: #969696;
-}
-
 @media
 screen and (max-device-width: 1024px) {
   body {
