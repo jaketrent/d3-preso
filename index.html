@@ -51,6 +51,10 @@
   background: linear-gradient(#DF0080 0%,#EC5656 52%,#EDA130 100%);
 }
 
+.slide-mike {
+  padding-top: 80px
+}
+
 .slide-fammatters {
   padding: 0;
 }
@@ -72,6 +76,15 @@
   background-size: cover
 }
 
+.slide-demo {
+  background: url(imgs/elephant.jpg) no-repeat center; /*http://bit.ly/193EluZ*/
+  background-size: cover
+}
+
+.slide-cronut {
+  background: url(imgs/cronut.jpg) no-repeat center; /*http://bit.ly/1bj41qU*/
+  background-size: cover
+}
 
 .slide-know {
   background: url(imgs/know.jpg) no-repeat center; /*http://bit.ly/GEuAK2*/
@@ -93,8 +106,10 @@
 <body class="overview">
 
 <section>
-  <h1 class="caption"><b class="big">D3</b></h1>
-  <p class="caption grey">Charts &amp; Graphs</p>
+  <h1 class="caption">
+    <b class="big">D3</b>
+    <div class="caption grey">bg, lib, api &amp; charts</div>
+  </h1>
 </section>
 
 <section>
@@ -159,7 +174,7 @@
   <h1 class="caption">D3 = Data-Driven Documents</h1>
 </section>
 
-<section>
+<section class="slide-mike">
   <img src="imgs/mbostock.jpg" alt="Mike Bostock" />
 </section>
 
@@ -276,13 +291,22 @@
   <div class="grey"><a href="https://github.com/mbostock/d3/wiki/API-Reference">github.com/mbostock/d3/wiki/API-Reference</a></div>
 </section>
 
+<section class="slide-demo">
+  <h1 class="caption">And now, a circus</h1>
+  <p style="position: absolute; text-align: center; width: 100%; left: 0; bottom: 0"><a href="http://codepen.io/jaketrent/pen/HsgkG">codepen.io/jaketrent/pen/HsgkG</a></p>
+</section>
+
 <section>
-  <h1 class="caption">3 Charts</h1>
+  <h1 class="caption">3 Interesting Charts</h1>
   <ul>
     <li>Cronut</li>
     <li>Curve</li>
     <li>Gauge</li>
   </ul>
+</section>
+
+<section class="slide-cronut">
+
 </section>
 
 <section class="slide-chart">
@@ -306,15 +330,11 @@
 </section>
 
 <section>
-  <h1 class="caption">"1 More Chart"</h1>
+  <h1 class="caption">Thoughts</h1>
 </section>
 
 <section>
-  <h1 class="caption">Tips</h1>
-</section>
-
-<section>
-  <p>Use it a lot on what it's good for.</p>
+  <p>Use d3 a lot on what it's good for.</p>
   <p class="grey">eg, chart</p>
 </section>
 
@@ -326,6 +346,16 @@
 <section>
   <p>Fetch data externally</p>
   <p class="grey">eg, pass in req promise</p>
+</section>
+
+<section>
+  <p>Consider abstractions judiciously</p>
+  <p class="grey">eg, super common, tedious</p>
+</section>
+
+<section>
+  <p>Have fun!</p>
+  <p class="grey">eg, have fun</p>
 </section>
 
 <section class="slide-know">
